@@ -1,4 +1,11 @@
-const getSchema = (): typeof cybozu.data.page.SCHEMA_DATA | null =>
+export namespace cx {
+  export type Schema =
+    | typeof cybozu.data.page.SCHEMA_DATA
+    | typeof cybozu.data.page.FORM_DATA.schema;
+  export type Field = typeof cybozu.data.page.SCHEMA_DATA.table.fieldList[string];
+}
+
+const getSchema = (): cx.Schema | null =>
   cybozu?.data?.page?.SCHEMA_DATA || cybozu?.data?.page?.FORM_DATA?.schema || null;
 
 /**
