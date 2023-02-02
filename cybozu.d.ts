@@ -48,6 +48,7 @@ declare namespace cybozu {
       export const APP_DEPLOYED: boolean;
       export const APP_ID: string;
       export const APP_NAME: string;
+      export const QUERY_STRING: string;
       namespace SCHEMA_DATA {
         export const groups: {
           childLocalId: string;
